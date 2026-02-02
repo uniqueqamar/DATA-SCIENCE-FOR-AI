@@ -1,12 +1,10 @@
-import numpy as np
-outcomes = np.array([1,2,3,4,5,6])
+from itertools import product
 
-probabilities = np.array([1/6]*6)
+sample_space = list(range(1,7))
 
-expectation = np.sum(outcomes*probabilities)
-print("Expectation (Mean):",expectation)
 
-variance = np.sum((outcomes-expectation)**2*probabilities)
-std_dev = np.sqrt(variance)
-print(variance)
-print(std_dev)
+even_nums =[2,4,6]
+
+P_even = len(even_nums)/len(sample_space)
+
+print(P_even)
